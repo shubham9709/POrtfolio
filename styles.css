@@ -696,7 +696,7 @@ textarea:focus {
 
 @media (max-width: 700px) {
     #page1 > .inner-div > div > p{
-      font-size:2vh;
+      font-size:1.7vh;
     }
     #page1 > .inner-div > .text {
     left: 0;
