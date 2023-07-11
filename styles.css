@@ -54,6 +54,10 @@ body {
   padding: 3%;
   text-align: start;
 }
+.dropdown > span > a {
+  text-decoration: none;
+  color: #fff;
+}
 nav > .nav-div {
   color: #fff;
   height: 8vh;
@@ -119,7 +123,7 @@ nav > .menu {
   width: 2rem;
   height: 15rem;
 }
-#page1 > .inner-div > button {
+#page1 > .inner-div > a > button {
   border: navy;
   outline: none;
   border-radius: 10px;
@@ -135,10 +139,7 @@ nav > .menu {
   z-index: 1;
   overflow: hidden;
 }
-#page1 > .inner-div > button > a {
-  text-decoration: none;
-  color: #fff;
-}
+
 .downloadbtn::before {
   content: "";
   background-color: #915eff;
@@ -720,7 +721,7 @@ textarea:focus {
   .portfolio-box img {
     height: 17rem;
   }
-  #page1 > .inner-div > button {
+  #page1 > .inner-div > a > button {
     top: 55vh;
     left: 15vw;
   }
