@@ -31,7 +31,30 @@ body {
   width: 100vw;
 }
 
-#page1 > nav {
+/* Dropdown */
+.dropdown {
+  color: #fff;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  height: 0;
+  width: 8rem;
+  border-radius: 15px;
+  background-color: rgba(12, 23, 58, 0.1);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+}
+.dropdown.open {
+  display: flex;
+  height: 9rem;
+}
+.dropdown > span {
+  padding: 3%;
+  text-align: start;
+}
+nav > .nav-div {
   color: #fff;
   height: 8vh;
   display: flex;
@@ -43,9 +66,31 @@ body {
   font-family: sans-serif;
   opacity: 0.7;
 }
-#page1 > nav > span {
+#page1 > nav > .nav-div > span {
   padding: 2%;
 }
+.nav-div > span > a {
+  text-decoration: none;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+.nav-div > span > a:hover {
+  color: #915eff;
+}
+
+nav > .menu {
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+.menu > i {
+  color: #fff;
+}
+
 #page1 > .inner-div > .text {
   position: absolute;
   left: 7vw;
@@ -74,6 +119,44 @@ body {
   width: 2rem;
   height: 15rem;
 }
+#page1 > .inner-div > button {
+  border: navy;
+  outline: none;
+  border-radius: 10px;
+  padding: 1.3rem;
+  position: absolute;
+  left: 9.5vw;
+  top: 40vh;
+  background-color: #0b0b40;
+  width: 10rem;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+#page1 > .inner-div > button > a {
+  text-decoration: none;
+  color: #fff;
+}
+.downloadbtn::before {
+  content: "";
+  background-color: #915eff;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: scale(1.5);
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.downloadbtn:hover::before,
+.downloadbtn:focus::before {
+  transform: scale(0);
+}
+
 #page1 > .inner-div > div > h1 {
   color: #fff;
   display: inline-block;
@@ -148,8 +231,8 @@ body {
 }
 
 .card > .card-inner > .front > img {
-  height: 8vh;
-  width: 4vw;
+  height: 5rem;
+  width: 5rem;
 }
 .card > .card-inner > .front > p {
   font-family: sans-serif;
@@ -193,6 +276,10 @@ body {
 }
 
 .back {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 30px;
   border: double 1px transparent;
   background-image: linear-gradient(#1b173f, #0a1134),
@@ -202,8 +289,12 @@ body {
 }
 
 /* Page3 */
-.timeline {
+#page3 {
+  height: 100vh;
+  width: 100vw;
   background: #080a15;
+}
+.timeline {
   padding: 0 8vw;
 }
 .timeline > h1 {
@@ -331,6 +422,7 @@ time {
 }
 .portfolio-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -338,8 +430,8 @@ time {
 .portfolio-container > .portfolio-box {
   position: relative;
   background-color: red;
-  width: 22vw;
-  height: 30vh;
+  width: 25rem;
+  height: 17rem;
   border-radius: 2rem;
   overflow: hidden;
   margin: 3%;
@@ -473,6 +565,10 @@ time {
   height: 100vh;
   width: 100vw;
   background-color: #000;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* display: flex;
+  flex-direction: column; */
 }
 #page5 > #particles-js {
   height: 100%;
@@ -480,20 +576,21 @@ time {
   padding: 10vh 11vw;
 }
 .contact {
-  display: flex;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
-#particles-js > div > .contact-form > h4 {
+#particles-js > .contact-form > h4 {
   color: #fff;
   font-size: 2vh;
   opacity: 0.8;
   font-family: sans-serif;
 }
-#particles-js > div > .contact-form > h1 {
+#particles-js > .contact-form > h1 {
   color: #fff;
   font-family: OpenSans;
   font-size: 8vh;
 }
-#particles-js > div > .contact-form {
+#particles-js > .contact-form {
   width: 35vw;
   height: 80vh;
   background-color: #070725;
@@ -504,7 +601,7 @@ time {
   color: #fff;
   padding: 2rem;
 }
-#contact > .earth {
+.earth {
   position: absolute;
   right: 8vw;
   bottom: 25vh;
@@ -512,14 +609,14 @@ time {
 video {
   width: 50vw;
 }
-.contact-form > form > p {
+.contact-form > div > p {
   padding: 2% 2% 2% 0;
   font-family: sans-serif;
   font-weight: 900;
   font-size: 18px;
   opacity: 0.8;
 }
-.contact-form > form > input,
+.contact-form > div > input,
 textarea {
   border: none;
   background-color: #101447;
@@ -536,7 +633,7 @@ textarea:focus {
   outline: none;
   border: 1px solid black;
 }
-.contact-form > form > textarea {
+.contact-form > div > textarea {
   height: 20vh;
   resize: none;
 }
@@ -566,6 +663,22 @@ textarea:focus {
     width: 22.5vw;
   }
 }
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40vw;
+  }
+}
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 300px;
+  }
+}
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
@@ -575,5 +688,71 @@ textarea:focus {
   }
   50% {
     border-color: #2d4356;
+  }
+}
+
+/* media queries */
+
+@media (max-width: 700px) {
+  #page1 > nav > .nav-div {
+    display: none;
+  }
+  nav > .menu {
+    display: block;
+  }
+  .inner-div > .line {
+    display: none;
+  }
+  #page2 > .aboutmeCards {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  #page3 {
+    padding-top: 35rem;
+  }
+  #page4 > h2 {
+    font-size: 7vh;
+  }
+  #page4 {
+    padding-top: 30rem;
+  }
+  .portfolio-box img {
+    height: 17rem;
+  }
+  #page1 > .inner-div > button {
+    top: 55vh;
+    left: 15vw;
+  }
+}
+@media (max-width: 1200px) {
+  .earth {
+    display: none;
+  }
+  #particles-js > .contact-form {
+    width: 60vw;
+    height: 80vh;
+  }
+  .typewriter {
+    border-right: none;
+    animation: none;
+  }
+}
+@media (max-width: 850px) {
+  #page1 > .inner-div > img {
+    display: none;
+  }
+  #particles-js > .contact-form {
+    width: 70vw;
+    height: 80vh;
+  }
+  #page2 > .page2-div > h1 {
+    font-size: 6vh;
+  }
+}
+@media (max-width: 1650px) {
+  #page1 > .inner-div > img {
+    bottom: -8rem;
+    left: 3rem;
   }
 }

@@ -14,11 +14,20 @@
     <div id="main">
       <div id="page1">
         <nav>
-          <span>Ghost</span>
-          <span>About</span>
-          <span>Resume</span>
-          <span>Contact me</span>
+          <div class="nav-div" id="myTopnav">
+            <span><a href="#page2">About</a></span>
+            <span><a href="./Resume.pdf" download="">Resume</a></span>
+            <span><a href="#particles-js">Contact me</a></span>
+          </div>
+          <span onclick="myFunction()" class="menu"
+            ><i class="ri-menu-line"></i
+          ></span>
         </nav>
+        <div class="dropdown">
+          <span><a href="#page2">About</a></span>
+          <span><a href="./Resume.pdf" download="">Resume</a></span>
+          <span><a href="#particles-js">Contact me</a></span>
+        </div>
         <div class="inner-div">
           <div class="line">
             <div class="round"></div>
@@ -32,7 +41,11 @@
             </p>
           </div>
           <br />
-
+          <button class="downloadbtn">
+            <a href="./Resume.pdf" download=""
+              >Resume <i class="ri-download-2-line"></i
+            ></a>
+          </button>
           <img src="computer.png" alt="" />
         </div>
       </div>
@@ -47,6 +60,7 @@
             scalable and user-friendly solutions that solve real world
             problems.Let's work together to bring your ideas to life.
           </p>
+          <br />
         </div>
         <div class="aboutmeCards">
           <div class="card card1">
@@ -105,25 +119,21 @@
           <ul>
             <li>
               <div class="timeline-text">
-                <time>2017</time> At vero eos et accusamus et iusto odio
-                dignissimos ducimus qui blanditiis praesentium At vero eos et
-                accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium
+                <time>2017</time> Completed my 10th board from St. Francis
+                School Jasidih and secured 92.5%
               </div>
             </li>
             <li>
               <div class="timeline-text">
-                <time>2019</time> Proin quam velit, efficitur vel neque vitae,
-                rhoncus commodo mi. Suspendisse finibus mauris et bibendum
-                molestie. Aenean ex augue, varius et pulvinar in, pretium non
-                nisi.
+                <time>2019</time> Completed my 12th boards from Mothers'
+                International academy and secured a total of 84.6%
               </div>
             </li>
             <li>
               <div class="timeline-text">
-                <time>2024</time> Proin iaculis, nibh eget efficitur varius,
-                libero tellus porta dolor, at pulvinar tortor ex eget ligula.
-                Integer eu dapibus arcu, sit amet sollicitudin eros.
+                <time>2024</time> Currently persuing B Tech in computer science
+                from Heritage Institute of technology Kolkata.YGPA at the end of
+                3rd year-8.01
               </div>
             </li>
           </ul>
@@ -135,98 +145,127 @@
           <div class="portfolio-box">
             <img src="images/Clock.png" alt="" />
             <div class="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Clock</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                Made using HTML,CSS,Javascript this clock grabs the systems'
+                time to give the current time.
               </p>
-              <a href=""><i class="ri-links-line"></i></a>
+              <a href="https://github.com/shubham9709/Clock"
+                ><i class="ri-links-line"></i
+              ></a>
             </div>
           </div>
           <div class="portfolio-box">
             <img src="images/Dice.png" alt="" />
             <div class="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Dice Game</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                Made using HTML,CSS and javascript. This game generates a random
+                number on dice and the person having greater value wins.
               </p>
-              <a href=""><i class="ri-links-line"></i></a>
+              <a href="https://github.com/shubham9709/Dice_challenge"
+                ><i class="ri-links-line"></i
+              ></a>
             </div>
           </div>
           <div class="portfolio-box">
             <img src="images/Drum.png" alt="" />
             <div class="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Drums</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                Made using HTML,CSS, and javascript. The drums website the key
+                pressed and generates different drum sounds according to it.
               </p>
-              <a href=""><i class="ri-links-line"></i></a>
+              <a href="https://github.com/shubham9709/Drum-Kit"
+                ><i class="ri-links-line"></i
+              ></a>
             </div>
           </div>
           <div class="portfolio-box">
             <img src="images/Weather.png" alt="" />
             <div class="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Weather API</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                This app is made using HTML,CSS,node and express js. It
+                leverages the openweathermap API to provide the weather data at
+                your location.
               </p>
-              <a href=""><i class="ri-links-line"></i></a>
+              <a href="https://github.com/shubham9709/Weather-Api/"
+                ><i class="ri-links-line"></i
+              ></a>
             </div>
           </div>
           <div class="portfolio-box">
             <img src="images/Tindog.png" alt="" />
             <div class="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Tindog</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                This beautifull looking website is created using HTML,CSS and
+                Bootstrap.
               </p>
-              <a href=""><i class="ri-links-line"></i></a>
+              <a href="https://github.com/shubham9709/Tindog"
+                ><i class="ri-links-line"></i
+              ></a>
             </div>
           </div>
           <div class="portfolio-box">
             <img src="images/Todo.png" alt="" />
             <div class="portfolio-layer">
-              <h4>Web Design</h4>
+              <h4>Todo List</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                Made using HTML,CSS node, ExpressJS,EJS,mongoDB. Here one can
+                insert his daily todo items. One can edit and delete the
+                completed todos.
               </p>
-              <a href=""><i class="ri-links-line"></i></a>
+              <a href="https://github.com/shubham9709/toDoList"
+                ><i class="ri-links-line"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
       <div id="particles-js">
-        <div id="contact">
-          <span class="contact-form">
-            <h4>GET IN TOUCH.</h4>
-            <h1>Contact</h1>
-            <form action="">
-              <p>Your Name</p>
-              <input type="text" />
-              <p>Your Email</p>
-              <input type="text" />
-              <p>Your Message</p>
-              <textarea name="" id="" cols="50" rows="10"></textarea>
-              <input class="btn" type="submit" />
-            </form>
-          </span>
-          <span class="earth">
-            <video src="earth_-_13426 (360p).mp4" autoplay loop muted></video>
-          </span>
+        <!-- <div id="contact"> -->
+        <span class="earth">
+          <video src="earth_-_13426 (360p).mp4" autoplay loop muted></video>
+        </span>
+        <div class="contact-form">
+          <h4>GET IN TOUCH.</h4>
+          <h1>Contact</h1>
+          <div id="myForm">
+            <p class="name">Your Name</p>
+            <input type="text" name="user_name" id="name" required />
+            <p class="email">Your Email</p>
+            <input type="email" name="user_email" id="email" required />
+            <p class="message">Your Message</p>
+            <textarea
+              name=""
+              cols="50"
+              rows="10"
+              name="message"
+              required
+              id="message"
+            ></textarea>
+            <input
+              class="btn"
+              type="submit"
+              onclick="sendmail()"
+              preventDefault
+            />
+          </div>
         </div>
+        <!-- </div> -->
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("7iZVk6iPtPbADboRT");
+      })();
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
       integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="

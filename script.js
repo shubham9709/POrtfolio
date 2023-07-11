@@ -1,3 +1,26 @@
+var dropdown = document.getElementsByClassName("dropdown")[0];
+
+function myFunction() {
+  dropdown.classList.toggle("open");
+}
+
+// Contact me Email js
+const sendmail = (event) => {
+  var templateParams = {
+    user_name: document.getElementById("name").value,
+    user_email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+  emailjs.send("service_hdohbgl", "template_lgkjp6k", templateParams).then(
+    function (response) {
+      alert("SUCCESS!", response.status, response.text);
+    },
+    function (error) {
+      alert("FAILED...", error);
+    }
+  );
+};
+
 function timeline() {
   "use strict";
 
