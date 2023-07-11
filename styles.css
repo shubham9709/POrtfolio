@@ -695,6 +695,9 @@ textarea:focus {
 /* media queries */
 
 @media (max-width: 700px) {
+    #particles-js > .contact-form > h1 {
+    font-size: 6vh;
+    }
     #page1 > .inner-div > div > p{
       font-size:1.7vh;
     }
