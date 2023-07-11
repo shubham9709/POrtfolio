@@ -695,6 +695,9 @@ textarea:focus {
 /* media queries */
 
 @media (max-width: 700px) {
+    #page1 > .inner-div > .text {
+    left: 3vw;
+  }
   #page1 > nav > .nav-div {
     display: none;
   }
@@ -716,7 +719,7 @@ textarea:focus {
     font-size: 7vh;
   }
   #page4 {
-    padding-top: 30rem;
+    padding-top: 35rem;
   }
   .portfolio-box img {
     height: 17rem;
