@@ -696,7 +696,7 @@ textarea:focus {
 
 @media (max-width: 700px) {
     #page1 > .inner-div > .text {
-    left: 3vw;
+    left: 0;
   }
   #page1 > nav > .nav-div {
     display: none;
